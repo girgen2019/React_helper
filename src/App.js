@@ -6,7 +6,7 @@ import { AppContent } from './LayOut/AppContent';
 import { Route, Routes } from 'react-router-dom';
 import { LayOut } from './LayOut/LayOut';
 import { Home } from './Components/Home';
-import { About } from './Components/Library/About';
+import { About } from './Library/About';
 
 const App = () => {
   return (
