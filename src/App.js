@@ -7,6 +7,7 @@ import { Route, Routes } from 'react-router-dom';
 import { LayOut } from './LayOut/LayOut';
 import { Home } from './Components/Home';
 import { About } from './Library/About';
+import { ComponentsProps } from './Library/Components&Props';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
             <Route path="/" element={<LayOut />}>
               <Route index element={<Home />} />
               <Route path="/about" element={<About />} />
+              <Route path="/components_props" element={<ComponentsProps />} />
             </Route>
           </Routes>
         </AppContent>

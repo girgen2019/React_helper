@@ -7,5 +7,9 @@ const button = {
 };
 
 export const Buttons = (props) => {
-  return <Button style={button}>{props.name}</Button>;
+  return (
+    <div style={{ hyphens:'auto' }}>
+      <Button style={button}>{props.name}</Button>
+    </div>
+  );
 };
