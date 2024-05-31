@@ -2,6 +2,7 @@
 
 import { NavLink } from 'react-router-dom';
 import { Buttons } from './Button';
+import { AppHeader } from '../LayOut/AppHeader';
 
 const container = {
   width: '20%',
@@ -17,11 +18,7 @@ export const Navigation = () => {
   return (
     <div style={container}>
       <NavLink to="/" end></NavLink>
-      <NavLink to="/about" ><Buttons name={"React это"}/></NavLink>
-      <NavLink to="/"></NavLink>
-      
-      {/* <Button components1={'UseState'} />
-      <Button components1={'UseReducer'} /> */}
+      <NavLink to="/about" ><Buttons name={"React это"}/></NavLink>      
     </div>
   );
 };

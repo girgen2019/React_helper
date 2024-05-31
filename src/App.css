@@ -42,3 +42,41 @@ html{
     transform: rotate(360deg);
   }
 }
+
+.title{
+  text-align: center;
+  padding: 5px 0px;
+}
+.content{
+  width: 80%;
+  padding: 0px 15px;
+  text-align: justify;
+  
+}
+.content_wrapper{
+  background-color: aliceblue;
+  color:#001529;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.active{
+  color: black;
+  transition: .5s;
+}
+.active:hover{
+  color:red;
+}
+.input{
+  padding: 10px 0;
+  display: block;
+}
+.inputs{
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  border: 1px solid black;
+  padding: 5px 5px;
+  margin: 10px 0;
+  list-style-type: none;
+  color: #001529;
+}
