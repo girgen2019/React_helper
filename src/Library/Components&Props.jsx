@@ -1,11 +1,11 @@
 /** @format */
-import { Divider, Typography } from 'antd';
+import { Typography } from 'antd';
 
-const { Title, Paragraph, Text, Link } = Typography;
-export const ComponentsProps = () => {
+const { Paragraph, Text } = Typography;
+export const Components_Props = () => {
   return (
     <>
-      <div className="content">
+      <div className="content" style={{overflowY: 'scroll' }}>
         <h1 className="title">Компоненты и пропсы</h1>
         <p className="content_wrapper">
           Компоненты позволяют разбить интерфейс на независимые части, про
@@ -13,9 +13,13 @@ export const ComponentsProps = () => {
           использовать несколько раз. Компоненты бывают функциональные и
           классовые.
           <Paragraph style={{ display: 'inline' }}>
-            <Text keyboard>{`function Welcome() {
+            <Text keyboard>
+              <pre>{`
+            function Welcome() {
                 return <h1>Привет, мир!</h1>;
-            }`}</Text>
+            }
+            `}</pre>
+            </Text>
           </Paragraph>
           Эта функция — компонент, потому что она получает данные в одном
           объекте («пропсы») в качестве параметра и возвращает React-элемент. Мы
@@ -24,18 +28,13 @@ export const ComponentsProps = () => {
           классы ES6:
           <Paragraph style={{ margin: '0' }}>
             <Text keyboard>
-              {`
-            class Welcome extends React.Component {`}
-            </Text>
-          </Paragraph>
-          <Paragraph style={{ margin: '0' }}>
-            <Text keyboard>{`render() {`} </Text>
-          </Paragraph>
-          <Paragraph style={{ margin: '0' }}>
-            <Text keyboard>
-              {`return <h1>Привет, {this.props.name}</h1>;
-  }
-            }`}{' '}
+              <pre>
+                {`class Welcome extends React.Component {
+                render() {
+                    return <h1>Привет, {this.props.name}</h1>;
+                }
+            }`}
+              </pre>
             </Text>
           </Paragraph>
         </p>
@@ -51,7 +50,13 @@ export const ComponentsProps = () => {
           Компонента должна себя вести как чистая функция. «Чистой» называется
           функция, которая: Для одинаковых входных данных всегда возвращает один
           результат. Не имеет побочных эффектов (то есть не изменяет внешние
-          состояния). Не зависит от внешних состояний.
+          состояния). Не зависит от внешних состояний. Такие функции называют
+          «чистыми», потому что они не меняют свои входные данные и предсказуемо
+          возвращают один и тот же результат для одинаковых аргументов.
+          <b>
+            React-компоненты обязаны вести себя как чистые функции по отношению
+            к своим пропсам.
+          </b>
         </p>
       </div>
     </>

@@ -3,6 +3,12 @@ html{
   padding: 0;
   background-color: #001529;
 }
+h1, h2, p{
+  margin: 0;
+  padding: 0;
+  background-color: #001529; 
+}
+
 
 .App {
   text-align: center;
@@ -45,7 +51,6 @@ html{
 
 .title{
   text-align: center;
-  padding: 5px 0px;
 }
 .content{
   width: 80%;
@@ -56,8 +61,10 @@ html{
 .content_wrapper{
   background-color: aliceblue;
   color:#001529;
+  margin: 10px 0px;
   padding: 5px 10px;
   border-radius: 5px;
+  line-height: 1.5;
 }
 .active{
   color: black;

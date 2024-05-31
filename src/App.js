@@ -7,7 +7,8 @@ import { Route, Routes } from 'react-router-dom';
 import { LayOut } from './LayOut/LayOut';
 import { Home } from './Components/Home';
 import { About } from './Library/About';
-import { ComponentsProps } from './Library/Components&Props';
+import { Components_Props } from './Library/Components&Props';
+import { State_LifeCycle } from './Library/State&LifeCycle';
 
 const App = () => {
   return (
@@ -19,7 +20,8 @@ const App = () => {
             <Route path="/" element={<LayOut />}>
               <Route index element={<Home />} />
               <Route path="/about" element={<About />} />
-              <Route path="/components_props" element={<ComponentsProps />} />
+              <Route path="/components_props" element={<Components_Props />} />
+              <Route path="/state_life_cycle" element={<State_LifeCycle />} />
             </Route>
           </Routes>
         </AppContent>
