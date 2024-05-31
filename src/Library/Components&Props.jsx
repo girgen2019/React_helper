@@ -13,7 +13,7 @@ export const Components_Props = () => {
           использовать несколько раз. Компоненты бывают функциональные и
           классовые.
           <Paragraph style={{ display: 'inline' }}>
-            <Text keyboard>
+            <Text >
               <pre>{`
             function Welcome() {
                 return <h1>Привет, мир!</h1>;
@@ -27,7 +27,7 @@ export const Components_Props = () => {
           буквально являются функциями. Ещё компоненты можно определять как
           классы ES6:
           <Paragraph style={{ margin: '0' }}>
-            <Text keyboard>
+            <Text >
               <pre>
                 {`class Welcome extends React.Component {
                 render() {
@@ -40,7 +40,7 @@ export const Components_Props = () => {
         </p>
         <p className="content_wrapper">
           <Paragraph style={{ margin: '0' }}>
-            <Text keyboard>{`const element = <Welcome name="Алиса" />;`}</Text>
+            <Text >{`const element = <Welcome name="Алиса" />;`}</Text>
           </Paragraph>
           Когда React встречает подобный элемент, он собирает все JSX-атрибуты и
           дочерние элементы в один объект и передаёт их нашему компоненту. Этот

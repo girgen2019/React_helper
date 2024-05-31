@@ -18,7 +18,7 @@ export const State_LifeCycle = () => {
         необходимо делать внутри компонента – инициализация и обновление
         состояния компонента.
         <Paragraph style={{ margin: '0' }}>
-          <Text keyboard>
+          <Text>
             <pre>
               {`
               class App extends React.Component {
@@ -36,24 +36,15 @@ export const State_LifeCycle = () => {
             </pre>
           </Text>
         </Paragraph>
-        Эта функция — компонент, потому что она получает данные в одном объекте
-        («пропсы») в качестве параметра и возвращает React-элемент. Мы будем
-        называть такие компоненты «функциональными», так как они буквально
-        являются функциями. Ещё компоненты можно определять как классы ES6:
+      </p>
+      <p className="content_wrapper">
+        Единственный допустимый способ обновления состояния компонента – через
+        setState().
+        <b>Так нельзя менять состояние: this.state.username='Mark'</b><br/>
+        1 способ изменить state:
         <Paragraph style={{ margin: '0' }}>
-          <Text keyboard>
-            {`
-            class Welcome extends React.Component {`}
-          </Text>
-        </Paragraph>
-        <Paragraph style={{ margin: '0' }}>
-          <Text keyboard>{`render() {`} </Text>
-        </Paragraph>
-        <Paragraph style={{ margin: '0' }}>
-          <Text keyboard>
-            {`return <h1>Привет, {this.props.name}</h1>;
-  }
-            }`}{' '}
+          <Text>
+            <pre>{`this.setState({username:'Mark'});`}</pre>
           </Text>
         </Paragraph>
       </p>
