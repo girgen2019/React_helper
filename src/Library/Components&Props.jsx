@@ -22,23 +22,36 @@ export const ComponentsProps = () => {
           будем называть такие компоненты «функциональными», так как они
           буквально являются функциями. Ещё компоненты можно определять как
           классы ES6:
-          <Paragraph style={{margin:"0"}}>
-            <Text keyboard>{`
+          <Paragraph style={{ margin: '0' }}>
+            <Text keyboard>
+              {`
             class Welcome extends React.Component {`}
-            </Text></Paragraph>
-            <Paragraph style={{margin:"0"}}><Text keyboard>{`render() {`} </Text>
-          </Paragraph>  
-            <Paragraph style={{margin:"0"}}><Text keyboard>{`return <h1>Привет, {this.props.name}</h1>;
+            </Text>
+          </Paragraph>
+          <Paragraph style={{ margin: '0' }}>
+            <Text keyboard>{`render() {`} </Text>
+          </Paragraph>
+          <Paragraph style={{ margin: '0' }}>
+            <Text keyboard>
+              {`return <h1>Привет, {this.props.name}</h1>;
   }
-            }`} </Text>
-          </Paragraph>  
-            
+            }`}{' '}
+            </Text>
+          </Paragraph>
         </p>
         <p className="content_wrapper">
-        <Paragraph style={{margin:"0"}}>
+          <Paragraph style={{ margin: '0' }}>
             <Text keyboard>{`const element = <Welcome name="Алиса" />;`}</Text>
           </Paragraph>
-          Когда React встречает подобный элемент, он собирает все JSX-атрибуты и дочерние элементы в один объект и передаёт их нашему компоненту. Этот объект называется «пропсы» (props).
+          Когда React встречает подобный элемент, он собирает все JSX-атрибуты и
+          дочерние элементы в один объект и передаёт их нашему компоненту. Этот
+          объект называется «пропсы» (props).
+        </p>
+        <p className="content_wrapper">
+          Компонента должна себя вести как чистая функция. «Чистой» называется
+          функция, которая: Для одинаковых входных данных всегда возвращает один
+          результат. Не имеет побочных эффектов (то есть не изменяет внешние
+          состояния). Не зависит от внешних состояний.
         </p>
       </div>
     </>
