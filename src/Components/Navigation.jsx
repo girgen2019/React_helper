@@ -18,7 +18,8 @@ export const Navigation = () => {
     <div style={container}>
       <NavLink to="/" end></NavLink>
       <NavLink to="/about" ><Buttons name={"React это"}/></NavLink>      
-      <NavLink to="/components_props" ><Buttons name={"Компоненты и пропсы"}/></NavLink>      
+      <NavLink to="/virtual_dom" ><Buttons name={"Virtual DOM"}/></NavLink>      
+      <NavLink to="/components_props" ><Buttons name={"ComponentsProps"}/></NavLink>      
       <NavLink to="/state_life_cycle" ><Buttons name={"Состояние и жизненный цикл"}/></NavLink>      
     </div>
   );

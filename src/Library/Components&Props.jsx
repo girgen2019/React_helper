@@ -5,46 +5,79 @@ const { Paragraph, Text } = Typography;
 export const Components_Props = () => {
   return (
     <>
-      <div className="content" style={{overflowY: 'scroll' }}>
+      <div className="content" style={{ overflowY: 'scroll' }}>
         <h1 className="title">Компоненты и пропсы</h1>
         <p className="content_wrapper">
-          Компоненты позволяют разбить интерфейс на независимые части, про
-          которые легко думать в отдельности. Их можно складывать вместе и
-          использовать несколько раз. Компоненты бывают функциональные и
-          классовые.
-          <Paragraph style={{ display: 'inline' }}>
-            <Text >
-              <pre>{`
-            function Welcome() {
-                return <h1>Привет, мир!</h1>;
-            }
-            `}</pre>
-            </Text>
+          Компоненты в React по способу создания разделяют на классовые –
+          объявленные как классы. И функциональные – как функции. Так же
+          компоненты разделяют на stateless – компоненты которые не несут в себе
+          какой-либо логики, кроме отрисовки. И statefull – компоненты которые
+          помимо отрисовки несут в себе какую-то логику (например обработку
+          событий или получение данных с сервера) имеют состояние. По типу
+          управления компоненты бывают управляемыми и неуправляемыми. В
+          управляемых компонентах данные форм (form, input) обрабатываются самим
+          компонентом (с помощью обработчиков) и они хранятся в state
+          компонента. В неуправляемых компонентах данных формы хранятся в DOM и
+          вместо того чтобы писать обработчик события для каждого поля input мы
+          можем считывать эти данные прямо из DOM с помощью{' '}
+          <Paragraph style={{ margin: '0', display: 'inline' }}>
+            <Text keyboard>Ref</Text>
+          </Paragraph>{' '}
+          Ref можем считывать эти данные прямо из DOM с помощью{' '}
+          <Paragraph style={{ margin: '0', display: 'inline' }}>
+            <Text keyboard>React.createRef()</Text>
           </Paragraph>
-          Эта функция — компонент, потому что она получает данные в одном
-          объекте («пропсы») в качестве параметра и возвращает React-элемент. Мы
-          будем называть такие компоненты «функциональными», так как они
-          буквально являются функциями. Ещё компоненты можно определять как
-          классы ES6:
-          <Paragraph style={{ margin: '0' }}>
-            <Text >
-              <pre>
-                {`class Welcome extends React.Component {
-                render() {
-                    return <h1>Привет, {this.props.name}</h1>;
-                }
-            }`}
-              </pre>
-            </Text>
+          или
+          <Paragraph style={{ margin: '0', display: 'inline' }}>
+            <Text keyboard>useRef()</Text>
           </Paragraph>
+          ).
         </p>
         <p className="content_wrapper">
-          <Paragraph style={{ margin: '0' }}>
-            <Text >{`const element = <Welcome name="Алиса" />;`}</Text>
-          </Paragraph>
-          Когда React встречает подобный элемент, он собирает все JSX-атрибуты и
-          дочерние элементы в один объект и передаёт их нашему компоненту. Этот
-          объект называется «пропсы» (props).
+          <h2
+            style={{
+              textAlign: 'center',
+              background: 'aliceblue',
+              margin: '0px',
+            }}
+          >
+            Классовые компоненты
+          </h2>
+          <ul>
+            <li>Используют методы жизненных циклов.</li>
+            <li>
+              Для управления состоянием используют{' '}
+              <Paragraph style={{ margin: '0', display: 'inline' }}>
+                <Text keyboard>this.setState(state, [callback]).</Text>
+              </Paragraph>
+            </li>
+            <li>Более сложные для понимания новичкам.</li>
+            <li>
+              Считаются устаревшими. Все еще встречаются в проектах. Команда
+              React разработчиков рекомендует писать новый код на функциональных
+              компонентах.
+            </li>
+          </ul>
+        </p>
+        <p className="content_wrapper">
+          <h2
+            style={{
+              textAlign: 'center',
+              background: 'aliceblue',
+              margin: '0px',
+            }}
+          >
+            Функциональные компоненты
+          </h2>
+          <ul>
+            <li>Используют Hooks (Хуки).</li>
+            <li>Более простые для понимания.</li>
+            <li>Более сложные для понимания новичкам.</li>
+            <li>
+              Конечный размер бандла приложения меньше чем на компонентах
+              построенных с помощью классов.
+            </li>
+          </ul>
         </p>
         <p className="content_wrapper">
           Компонента должна себя вести как чистая функция. «Чистой» называется

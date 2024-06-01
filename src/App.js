@@ -9,6 +9,7 @@ import { Home } from './Components/Home';
 import { About } from './Library/About';
 import { Components_Props } from './Library/Components&Props';
 import { State_LifeCycle } from './Library/State&LifeCycle';
+import { VirtualDom } from './Library/VirtualDOM';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
             <Route path="/" element={<LayOut />}>
               <Route index element={<Home />} />
               <Route path="/about" element={<About />} />
+              <Route path="/virtual_dom" element={<VirtualDom />} />
               <Route path="/components_props" element={<Components_Props />} />
               <Route path="/state_life_cycle" element={<State_LifeCycle />} />
             </Route>
