@@ -33,16 +33,17 @@ export const Components_Props = () => {
           </Paragraph>
           ).
         </p>
-        <p className="content_wrapper">
           <h2
-            style={{
-              textAlign: 'center',
-              background: 'aliceblue',
-              margin: '0px',
-            }}
+           style={{
+            textAlign: 'center',
+            color:'#fff',
+            fontSize:'26px',
+            margin:'15px 0px',
+          }}
           >
             Классовые компоненты
           </h2>
+        <p className="content_wrapper">
           <ul>
             <li>Используют методы жизненных циклов.</li>
             <li>
@@ -59,16 +60,17 @@ export const Components_Props = () => {
             </li>
           </ul>
         </p>
-        <p className="content_wrapper">
           <h2
-            style={{
-              textAlign: 'center',
-              background: 'aliceblue',
-              margin: '0px',
-            }}
+           style={{
+            textAlign: 'center',
+            color:'#fff',
+            fontSize:'26px',
+            margin:'15px 0px',
+          }}
           >
             Функциональные компоненты
           </h2>
+        <p className="content_wrapper">
           <ul>
             <li>Используют Hooks (Хуки).</li>
             <li>Более простые для понимания.</li>

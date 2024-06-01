@@ -94,6 +94,73 @@ export const State_LifeCycle = () => {
         компоненты обязаны вести себя как чистые функции по отношению к своим
         пропсам.
       </p>
+      <h2
+        style={{
+          textAlign: 'center',
+          color: '#fff',
+          fontSize: '26px',
+          margin: '15px 0px',
+        }}
+      >
+        Методы жизненного цикла компонента
+      </h2>
+      <p className="content_wrapper">
+        <ul>
+          <li>
+            <Paragraph style={{ margin: '0', display: 'inline' }}>
+              <Text keyboard>getDerivedStateFromProps</Text>
+            </Paragraph>{' '}
+            - запускается перед вызовом метода render() и при каждом повторном
+            рендеринге. Он используется в редких случаях, когда нам требуется
+            производное состояние. Для получения более подробной информации
+            смотрите если вам требуется производное состояние.
+          </li>
+          <li>
+            <Paragraph style={{ margin: '0', display: 'inline' }}>
+              <Text keyboard>componentDidMount</Text>
+            </Paragraph>{' '}
+            - выполняется после первого рендеринга, здесь выполняются
+            AJAX-запросы, обновляется DOM или состояние компонента,
+            регистрируются обработчики событий.
+          </li>
+          <li>
+            <Paragraph style={{ margin: '0', display: 'inline' }}>
+              <Text keyboard>shouldComponentUpdate</Text>
+            </Paragraph>{' '}
+            - определяет, должен ли компонент обновляться. Значением по
+            умолчанию является true. Если вы уверены в том, что компонент не
+            нуждается в повторном рендеринге при изменении состояния или пропов,
+            тогда можете вернуть ложное значение. Это подходящее место для
+            улучшения производительности, позволяющее предотвратить ненужные
+            рендеринги при получении компонентом новых пропов.
+          </li>
+          <li>
+            <Paragraph style={{ margin: '0', display: 'inline' }}>
+              <Text keyboard>getSnapshotBeforeUpdate</Text>
+            </Paragraph>
+            getSnapshotBeforeUpdate - выполняется перед применением результатов
+            рендеринга к DOM. Любое значение, возвращенное этим методом,
+            передается в componentDidUpdate(). Это может быть полезным для
+            получения информации из DOM, например, позиции курсора или величины
+            прокрутки.
+          </li>
+          <li>
+            <Paragraph style={{ margin: '0', display: 'inline' }}>
+              <Text keyboard>componentDidUpdate</Text>
+            </Paragraph>
+            componentDidUpdate - в основном, используется для обновления DOM в
+            соответствии с изменением состояния или пропов. Не выполняется, если
+            shouldComponentUpdate() возвращает false.
+          </li>
+          <li>
+            <Paragraph style={{ margin: '0', display: 'inline' }}>
+              <Text keyboard>componentWillUnmount</Text>
+            </Paragraph>
+            componentWillUnmount - используется для отмены сетевых запросов или
+            удаления обработчиков событий, связанных с компонентом.
+          </li>
+        </ul>
+      </p>
     </div>
   );
 };
