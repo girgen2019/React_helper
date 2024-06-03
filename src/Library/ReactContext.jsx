@@ -44,22 +44,61 @@ export const ReactContext = () => {
             React Context API
           </h2>
           <p className="content_wrapper">
-          Для работы с контекстом в React Context существуют такие методы:
-          <ul>
-            <li><Paragraph style={{ margin: '0', display: 'inline' }}>
-              <Text keyboard>React.createContext()</Text>
-            </Paragraph></li>
-            <li><Paragraph style={{ margin: '0', display: 'inline' }}>
-              <Text keyboard>Context.Provider</Text>
-            </Paragraph></li>
-            <li><Paragraph style={{ margin: '0', display: 'inline' }}>
-              <Text keyboard>  Context.Consumer</Text>
-            </Paragraph></li>
-            <li><Paragraph style={{ margin: '0', display: 'inline' }}>
-              <Text keyboard>Class.contextType</Text>
-            </Paragraph></li>
-          </ul>
-            
+            Для работы с контекстом в React Context существуют такие методы:
+            <ul>
+              <li>
+                <Paragraph style={{ margin: '0', display: 'inline' }}>
+                  <Text keyboard>React.createContext()</Text>
+                </Paragraph>
+              </li>
+              <li>
+                <Paragraph style={{ margin: '0', display: 'inline' }}>
+                  <Text keyboard>Context.Provider</Text>
+                </Paragraph>
+              </li>
+              <li>
+                <Paragraph style={{ margin: '0', display: 'inline' }}>
+                  <Text keyboard> Context.Consumer</Text>
+                </Paragraph>
+              </li>
+              <li>
+                <Paragraph style={{ margin: '0', display: 'inline' }}>
+                  <Text keyboard>Class.contextType</Text>
+                </Paragraph>
+              </li>
+            </ul>
+          </p>
+          <h2
+            style={{
+              textAlign: 'center',
+              margin: '5px 0px',
+            }}
+          >
+            React.createContext()
+          </h2>
+          <p className="content_wrapper">
+            Создаёт объект Context. Когда React рендерит компонент, который
+            подписан на этот объект, React получит текущее значение контекста из
+            ближайшего подходящего Provider выше в дереве компонентов. Аргумент
+            defaultValue используется только в тoм случае, если для компонента
+            нет подходящего Provider выше в дереве.
+          </p>
+          <h2
+            style={{
+              textAlign: 'center',
+              margin: '5px 0px',
+            }}
+          >
+            Context.Provider
+          </h2>
+          <p className="content_wrapper">
+            Каждый объект Context используется вместе с Provider компонентом,
+            который позволяет дочерним компонентам, использующим этот контекст,
+            подписаться на его изменения. Компонент Provider принимает проп
+            value, который будет передан во все компоненты, использующие этот
+            контекст и являющиеся потомками этого компонента Provider. Один
+            Provider может быть связан с несколькими компонентами,
+            потребляю-щими контекст.
           </p>
         </div>
       </div>
