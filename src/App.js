@@ -10,6 +10,9 @@ import { About } from './Library/About';
 import { Components_Props } from './Library/Components&Props';
 import { State_LifeCycle } from './Library/State&LifeCycle';
 import { VirtualDom } from './Library/VirtualDOM';
+import { Keys } from './Library/Keys';
+import { ReactFragment } from './Library/ReactFragment';
+import { ReactContext } from './Library/ReactContext';
 
 const App = () => {
   return (
@@ -24,6 +27,9 @@ const App = () => {
               <Route path="/virtual_dom" element={<VirtualDom />} />
               <Route path="/components_props" element={<Components_Props />} />
               <Route path="/state_life_cycle" element={<State_LifeCycle />} />
+              <Route path="/keys" element={<Keys />} />
+              <Route path="/fragments" element={<ReactFragment />} />
+              <Route path="/context" element={<ReactContext />} />
             </Route>
           </Routes>
         </AppContent>

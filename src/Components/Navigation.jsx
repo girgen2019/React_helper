@@ -21,6 +21,9 @@ export const Navigation = () => {
       <NavLink to="/virtual_dom" ><Buttons name={"Virtual DOM"}/></NavLink>      
       <NavLink to="/components_props" ><Buttons name={"ComponentsProps"}/></NavLink>      
       <NavLink to="/state_life_cycle" ><Buttons name={"Состояние и жизненный цикл"}/></NavLink>      
+      <NavLink to="/keys" ><Buttons name={"Keys"}/></NavLink>      
+      <NavLink to="/fragments" ><Buttons name={"React.Fragments"}/></NavLink>      
+      <NavLink to="/context" ><Buttons name={"React.Context"}/></NavLink>      
     </div>
   );
 };
