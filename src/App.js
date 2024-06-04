@@ -22,7 +22,7 @@ const App = () => {
         <AppHeader />
         <AppContent>
           <Routes>
-            <Route path="/" element={<LayOut />}>
+            <Route path="/React_helper" element={<LayOut />}>
               <Route index element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/virtual_dom" element={<VirtualDom />} />

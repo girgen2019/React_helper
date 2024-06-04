@@ -16,7 +16,7 @@ const container = {
 export const Navigation = () => {
   return (
     <div style={container}>
-      <NavLink to="/" end></NavLink>
+      <NavLink to="/React_helper" end></NavLink>
       <NavLink to="/about" ><Buttons name={"React это"}/></NavLink>      
       <NavLink to="/virtual_dom" ><Buttons name={"Virtual DOM"}/></NavLink>      
       <NavLink to="/components_props" ><Buttons name={"ComponentsProps"}/></NavLink>      
