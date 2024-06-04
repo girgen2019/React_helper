@@ -1,4 +1,7 @@
 /** @format */
+import { Typography } from 'antd';
+
+const { Paragraph, Text } = Typography;
 
 export const Hooks = () => {
   return (
@@ -73,6 +76,49 @@ export const Hooks = () => {
                 Нельзя вызывать внутри условий, циклов, вложенных функций.
               </li>
             </ul>
+          </p>
+          <h2
+            style={{
+              textAlign: 'center',
+              margin: '5px 0px',
+            }}
+          >
+            useState()
+          </h2>
+          <p className="content_wrapper">
+            <Paragraph style={{ margin: '0', display: 'inline' }}>
+              <Text keyboard>useState</Text>
+            </Paragraph>
+            — это хук который наделяет наш функциональный компонент внутренним
+            состоянием. React будет хранить это состояние между рендерами. Вызов
+            useState возвращает две вещи: текущее значение состояния и функцию
+            для его обновления.
+            <br /> useState() не объеденяет измененные поля с текущим объектом
+            состояния, как это делает классовый метод this.setState(). Поэтому в
+            таких случаях используйте аргумент предыдущего состояния функции
+            обновления состояния:
+          </p>
+          <h2
+            style={{
+              textAlign: 'center',
+              margin: '5px 0px',
+            }}
+          >
+            useEffect()
+          </h2>
+          <p className="content_wrapper">
+            Хук эффекта даёт нам возможность выполнять побочные эффекты в
+            функциональном компоненте: Если вам знакомы классовые методы
+            жизненного цикла React, хук useEffect представляет собой
+            совокупность методов:
+            <ul>
+              <li>componentDidMount</li>
+              <li>componentDidUpdate</li>
+              <li>componentWillUnmount</li>
+            </ul>
+            Эффекты выполняются один раз при каждом рендере!
+            <br/>
+            Существует два распространенных вида побочных эффектов в компонентах React: компоненты, которые требуют и не требуют сброса.
           </p>
         </div>
       </div>
