@@ -24,14 +24,14 @@ const App = () => {
           <Routes>
             <Route path="/React_helper" element={<LayOut/>}>
               <Route index element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/virtual_dom" element={<VirtualDom />} />
-              <Route path="/components_props" element={<Components_Props />} />
-              <Route path="/state_life_cycle" element={<State_LifeCycle />} />
-              <Route path="/keys" element={<Keys />} />
-              <Route path="/fragments" element={<ReactFragment />} />
-              <Route path="/context" element={<ReactContext />} />
-              <Route path="/hooks" element={<Hooks />} />
+              <Route path="about" element={<About />} />
+              <Route path="virtual_dom" element={<VirtualDom />} />
+              <Route path="components_props" element={<Components_Props />} />
+              <Route path="state_life_cycle" element={<State_LifeCycle />} />
+              <Route path="keys" element={<Keys />} />
+              <Route path="fragments" element={<ReactFragment />} />
+              <Route path="context" element={<ReactContext />} />
+              <Route path="hooks" element={<Hooks />} />
             </Route>
           </Routes>
         </AppContent>
