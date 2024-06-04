@@ -11,7 +11,7 @@ export const Logo = () => {
   const navigate = useNavigate()
 
   const handleToHome = () => {
-    navigate('/')
+    navigate('/React_helper')
   }
 
   return <img src={LogoImg} style={logoImg} onClick={handleToHome}/>;
