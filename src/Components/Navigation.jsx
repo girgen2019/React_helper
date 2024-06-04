@@ -24,6 +24,7 @@ export const Navigation = () => {
       <NavLink to="/keys" ><Buttons name={"Keys"}/></NavLink>      
       <NavLink to="/fragments" ><Buttons name={"React.Fragments"}/></NavLink>      
       <NavLink to="/context" ><Buttons name={"React.Context"}/></NavLink>      
+      <NavLink to="/hooks" ><Buttons name={"Hooks"}/></NavLink>      
     </div>
   );
 };

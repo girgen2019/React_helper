@@ -13,6 +13,7 @@ import { VirtualDom } from './Library/VirtualDOM';
 import { Keys } from './Library/Keys';
 import { ReactFragment } from './Library/ReactFragment';
 import { ReactContext } from './Library/ReactContext';
+import { Hooks } from './Library/Hooks';
 
 const App = () => {
   return (
@@ -30,6 +31,7 @@ const App = () => {
               <Route path="/keys" element={<Keys />} />
               <Route path="/fragments" element={<ReactFragment />} />
               <Route path="/context" element={<ReactContext />} />
+              <Route path="/hooks" element={<Hooks />} />
             </Route>
           </Routes>
         </AppContent>
