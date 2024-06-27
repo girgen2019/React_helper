@@ -14,6 +14,7 @@ import { Keys } from './Library/Keys';
 import { ReactFragment } from './Library/ReactFragment';
 import { ReactContext } from './Library/ReactContext';
 import { Hooks } from './Library/Hooks';
+import HOC_Portals from './Library/HOC&Portals';
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
               <Route path="fragments" element={<ReactFragment />} />
               <Route path="context" element={<ReactContext />} />
               <Route path="hooks" element={<Hooks />} />
+              <Route path="hoc_portals" element={<HOC_Portals />} />
             </Route>
           </Routes>
         </AppContent>
