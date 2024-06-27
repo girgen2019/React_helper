@@ -6,7 +6,7 @@ const { Paragraph, Text } = Typography;
 export const ReactContext = () => {
   return (
     <>
-      <div className="content">
+      <div className="content" style={{ overflowY: 'scroll'}}>
         <div>
           <h1 className="title">React Context</h1>
           <p className="content_wrapper">
