@@ -8,7 +8,6 @@ import '../App.css';
 
 const styleHome = {
   display: 'flex',
-  
 };
 
 const styleParagraph = {
@@ -31,8 +30,11 @@ export const Home = () => {
   };
   return (
     <div style={styleHome}>
-      <div style={{ padding: '0px 10px' }}>
-        <img src={ImageRoadMap} style={{height:"100vh", margin:"auto 10%" }} />
+      <div
+        style={{ padding: '0px 10px', 
+  }}
+      >
+        <img src={ImageRoadMap} style={{height:"100vh"}}/>
       </div>
     </div>
   );
